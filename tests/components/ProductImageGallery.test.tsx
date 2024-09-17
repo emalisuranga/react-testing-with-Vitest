@@ -10,7 +10,7 @@ describe('ProductImageGallery', () => {
     });
     it('should render a list of images', () => { 
         const imageUrls = ['https://example.com/image1.jpg', 'https://example.com/image2.jpg'];
-        const { container } = render(<ProductImageGallery imageUrls={imageUrls} />)
+        render(<ProductImageGallery imageUrls={imageUrls} />)
 
         const images = screen.getAllByRole('img');
         expect(images).toHaveLength(imageUrls.length);
