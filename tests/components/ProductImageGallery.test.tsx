@@ -14,6 +14,8 @@ describe('ProductImageGallery', () => {
 
         const images = screen.getAllByRole('img');
         expect(images).toHaveLength(imageUrls.length);
-        expect(images[0]).toHaveAttribute('src', imageUrls[0]);
+        imageUrls.forEach((url, index) => {
+            expect(images[index]).toHaveAttribute('src', url);
+        })  
     });
 })
